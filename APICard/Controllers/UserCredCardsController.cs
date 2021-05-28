@@ -20,13 +20,7 @@ namespace APICard.Controllers
             _context = context;
         }
 
-        // GET: api/UserCredCards
-        [HttpGet]
-        public async Task<ActionResult<IEnumerable<UserCredCard>>> GetUserCredCards()
-        {
-            return await _context.UserCredCards.ToListAsync();
-        }
-
+        
         // GET: api/UserCredCards/5
         [HttpGet("{Email}")]
         public async Task<ActionResult<List<UserCredCard>>> GetUsuario(String Email)
@@ -41,37 +35,7 @@ namespace APICard.Controllers
             return userCredCard;
         }
 
-        // PUT: api/UserCredCards/5
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutUserCredCard(int id, UserCredCard userCredCard)
-        {
-            if (id != userCredCard.Id)
-            {
-                return BadRequest();
-            }
-
-            _context.Entry(userCredCard).State = EntityState.Modified;
-
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!UserCredCardExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
-
-            return NoContent();
-        }
-
+       
         // POST: api/UserCredCards
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
@@ -92,24 +56,10 @@ namespace APICard.Controllers
             _context.UserCredCards.Add(usercredcard1);
             await _context.SaveChangesAsync();
 
-            return usercredcard1.Email;
+            return usercredcard1.Card;
         }
 
-        // DELETE: api/UserCredCards/5
-        [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteUserCredCard(int id)
-        {
-            var userCredCard = await _context.UserCredCards.FindAsync(id);
-            if (userCredCard == null)
-            {
-                return NotFound();
-            }
-
-            _context.UserCredCards.Remove(userCredCard);
-            await _context.SaveChangesAsync();
-
-            return NoContent();
-        }
+       
 
         private bool UserCredCardExists(int id)
         {
