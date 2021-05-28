@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31313.79
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APICard", "APICard\APICard.csproj", "{8BAE57DA-7BE7-4400-BC47-BE58A7B636C1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8BAE57DA-7BE7-4400-BC47-BE58A7B636C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BAE57DA-7BE7-4400-BC47-BE58A7B636C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8BAE57DA-7BE7-4400-BC47-BE58A7B636C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8BAE57DA-7BE7-4400-BC47-BE58A7B636C1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F9B3BD41-92FD-44A9-812B-B1B4AD634E0A}
+	EndGlobalSection
+EndGlobal
